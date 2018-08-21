@@ -1,0 +1,27 @@
+{
+  "name": "solo-project",
+  "version": "1.0.0",
+  "description": "finding the scoop on da poop",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slaglebagel17/Poop-Scoop.git"
+  },
+  "keywords": [
+    "poop",
+    "scoope",
+    "bathroom",
+    "finder",
+    "pee",
+    "restroom"
+  ],
+  "author": "Patrick Slagle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slaglebagel17/Poop-Scoop/issues"
+  },
+  "homepage": "https://github.com/slaglebagel17/Poop-Scoop#readme"
+}
