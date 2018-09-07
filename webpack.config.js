@@ -9,6 +9,11 @@ module.exports = {
         //we need the below for dev server. Otherwise it just looks in the root folder. 
         publicPath: "build"
     },
+    devServer: {
+        proxy: {
+            '/': 'http://localhost:3000'
+        }
+    },
     module: {
         rules: [
             {
