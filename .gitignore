@@ -1,13 +1,3 @@
-# exclude everything
-./build/
-build/webpack-bundle.js
-
-# exception to the rule, can't commit empty folders
 node_modules
-server/keys.js
-
-
-# Dependency directories
-node_modules/
-
+build
 .env
