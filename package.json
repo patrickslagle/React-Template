@@ -9,7 +9,6 @@
     "webpack": "webpack",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "dev": "concurrently \"npm run start\" \"npm run client\"",
-    "babel": "node_modules/.bin/babel client -d babel/src && node_modules/.bin/babel server -d babel"
   },
   "repository": {
     "type": "git",
