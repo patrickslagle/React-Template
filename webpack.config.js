@@ -1,23 +1,16 @@
 const webpack = require('webpack');
 const path = require ('path');
 
-module.exports = {
+const browserConfig = {
     entry: './client/index.js',
     output: {
-        path: path.resolve(__dirname, 'build/'),
-        filename: 'webpack-bundle.js',
-        //we need the below for dev server. Otherwise it just looks in the root folder. 
-        publicPath: "build"
-    },
-    devServer: {
-        proxy: {
-            '/': 'http://localhost:3000'
-        }
+        path: path.resolve(__dirname, 'public/'),
+        filename: 'bundle.js'
     },
     module: {
         rules: [
             {
-                test: /jsx?/,
+                test: /js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
@@ -25,11 +18,42 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.css$/,
                 exclude: /node_modules/,
                 loaders: ['style-loader', 'css-loader']
             }
         ]
     },
-    mode: "development"
+    mode: 'development'
 }
+
+const serverConfig = {
+    entry: './server/server.js',
+    target: "node",
+    output: {
+        path: __dirname,
+        filename: "server.js",
+        libraryTarget: "commonjs2"
+    },
+    module: {
+        rules: [
+            {
+                test: /js$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['react', 'es2015']
+                }
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                loaders: ['style-loader', 'css-loader'],
+            }
+        ]
+    },
+    mode: 'development'
+}
+
+module.exports = [browserConfig, serverConfig]
+

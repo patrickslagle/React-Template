@@ -9,6 +9,7 @@
     "webpack": "webpack",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "dev": "concurrently \"npm run start\" \"npm run client\"",
+    "server": "NODE_ENV=development webpack -w & NODE_ENV=development node server.js"
   },
   "repository": {
     "type": "git",
