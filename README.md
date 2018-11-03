@@ -1,2 +1,1 @@
-# Poop-Scoop
-Get the scoop on the poop
+# New Application Boilerplate
